@@ -36,10 +36,10 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
-    - task: KubernetesManifest@0
-      displayName: Deploy
-      inputs:
-        kubernetesServiceConnection: eks-connection
-        namespace: default
-        manifests: |
-          kubernetes/node-deployment.yaml
+    # - task: KubernetesManifest@0
+    #   displayName: Deploy
+    #   inputs:
+    #     kubernetesServiceConnection: eks-connection
+    #     namespace: default
+    #     manifests: |
+    #       kubernetes/node-deployment.yaml
